@@ -17,10 +17,6 @@ namespace Interlogica.Pastry.FrontEnd.Services
         public AdminService(IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
-            using (var scope = _serviceProvider.CreateScope())
-            {
-                scope.ServiceProvider.GetRequiredService<IdentityDbContext>().Database.Migrate();
-            }
         }
 
         public async Task<bool> AllowAdminUserCreationAsync()
