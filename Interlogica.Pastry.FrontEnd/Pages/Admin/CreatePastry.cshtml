@@ -1,0 +1,98 @@
+﻿@page
+@model Interlogica.Pastry.FrontEnd.Pages.Admin.CreatePastryModel
+@{
+
+}
+
+
+
+<h3>Create Confectionery</h3>
+
+<form method="post" class="form-horizontal">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <input asp-for="Confectionery.Id" type="hidden" />
+    <div class="form-group">
+        <label asp-for="Confectionery.Name" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Confectionery.Name" class="form-control" />
+            <span asp-validation-for="Confectionery.Name" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Confectionery.Price" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <textarea asp-for="Confectionery.Price" class="form-control"></textarea>
+            <span asp-validation-for="Confectionery.Price" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Confectionery.BakingDate" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Confectionery.BakingDate" class="form-control" />
+            <span asp-validation-for="Confectionery.BakingDate" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Confectionery.Description" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Confectionery.Description" class="form-control" />
+            <span asp-validation-for="Confectionery.Description" class="text-danger"></span>
+        </div>
+    </div>
+
+
+
+
+
+
+
+        <!--<div class="form-group">
+            <table id="IngredientsTable" class="table">
+                <tr>
+                    <th>Ingredient</th>
+                    <th>Quantity</th>
+                    <th>MeasureUnit</th>
+                    @foreach (var ingredient in Model.Ingredients)
+                    {
+                        <td>
+                            <input type="text" asp-for="@ingredient.Name" />
+                        </td>
+                        <td>
+                            <input type="text" asp-for="@ingredient.Quantity" />
+                        </td>
+                        <td>
+                            <input type="text" asp-for="@ingredient.MeasureUnit" />
+                        </td>
+                    }
+                </tr>
+
+
+            </table>-->
+        <!--<button type="button" onclick="AddRow()">Add new ingredient</button> -->
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                    $("#button1").click(function (e) {
+                        textbox = $("<tr><td><input type='text'></td><td><input type='text'></td><td><select id=\"uom\" name=\"uom\"><option value=\"gr\">Grammi</option><option value=\"ml\">Ml</option><option value=\"unita\">Unità</option></select></td></tr>")
+                        $("table").append(textbox);
+                });
+                });
+            </script>
+
+        </div>-->
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @*<button id="button1" type="button">Aggiungi ingrediente</button>*@
+                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="submit" asp-page-handler="Delete" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </form>
+
+
+@section Scripts {
+
+    <partial name="_ValidationScriptsPartial" />
+
+}

@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interlogica.Pastry.BackEnd", "Interlogica.Pastry.BackEnd\Interlogica.Pastry.BackEnd.csproj", "{A65CD4C6-BC56-4763-8EAB-94C30C728090}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interlogica.Pastry.DTO", "PastryDTO\Interlogica.Pastry.DTO.csproj", "{50849573-E3BF-4AC8-871F-D4528B118928}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interlogica.Pastry.FrontEnd", "Interlogica.Pastry.FrontEnd\Interlogica.Pastry.FrontEnd.csproj", "{18FFF829-72F8-4364-8C8C-BE0E0038D662}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A65CD4C6-BC56-4763-8EAB-94C30C728090} = {A65CD4C6-BC56-4763-8EAB-94C30C728090}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A65CD4C6-BC56-4763-8EAB-94C30C728090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A65CD4C6-BC56-4763-8EAB-94C30C728090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A65CD4C6-BC56-4763-8EAB-94C30C728090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A65CD4C6-BC56-4763-8EAB-94C30C728090}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50849573-E3BF-4AC8-871F-D4528B118928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50849573-E3BF-4AC8-871F-D4528B118928}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50849573-E3BF-4AC8-871F-D4528B118928}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50849573-E3BF-4AC8-871F-D4528B118928}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18FFF829-72F8-4364-8C8C-BE0E0038D662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18FFF829-72F8-4364-8C8C-BE0E0038D662}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18FFF829-72F8-4364-8C8C-BE0E0038D662}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18FFF829-72F8-4364-8C8C-BE0E0038D662}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4934C31-0147-4699-A0CB-983266D43056}
+	EndGlobalSection
+EndGlobal

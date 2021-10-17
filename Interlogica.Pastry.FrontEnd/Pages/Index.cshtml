@@ -1,0 +1,45 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="pastry">
+    <h1 class="display-1"> Pastry Management. <small class="text-muted">Today is @DateTime.Now.ToShortDateString()</small></h1>
+    
+    @if (Model.IsAdmin)
+    {
+<div>
+    <a asp-page="/Admin/CreatePastry" class="btn btn-default btn-xs">Add Confectionery</a>
+</div>
+    }
+
+    <div class="row">
+        @foreach (var conf in Model.Confectionery)
+        {
+            <div class="col-sm-6" style="margin-bottom: 20px">
+                <div class="card shadow Confectionery">
+                    <div class="card-body">
+                        <h5 class="card-title">@conf.Name</h5>
+                        <p class="card-text">@conf.Description</p>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseIngredients_@conf.Id" aria-expanded="false" aria-controls="collapseIngredients_@conf.Id">Ingredienti</button>
+                        <div class="collapse" id="collapseIngredients_@conf.Id">
+                            <div class="card card-body">
+                                TODO:Inserire ingredienti
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <h5>Availability: @conf.AvailableQuantity</h5>
+                        <h5>Price: @conf.CurrentPrice.ToString("C")</h5>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+    </div>
+
+
+
+</div>
